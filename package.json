@@ -1,0 +1,18 @@
+{
+  "name": "fightertunnel-bot",
+  "version": "1.0.0",
+  "description": "Bot WhatsApp untuk mengelola server dan membuat akun VPN dengan pembayaran PAY-AS.",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "@fightertunnel/createft": "^0.6.0",
+    "@mengkodingan/ckptw": "^4.3.6",
+    "@whiskeysockets/baileys": "^6.7.9",
+    "dotenv": "^16.0.0",
+    "sqlite3": "^5.0.0"
+  },
+  "author": "fightertunnel",
+  "license": "MIT"
+}
