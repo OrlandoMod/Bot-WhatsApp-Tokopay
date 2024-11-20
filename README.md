@@ -12,11 +12,13 @@ VpnBotStore adalah bot yang dirancang untuk memudahkan pengguna dalam melakukan 
 
 Sebelum menjalankan proyek ini, pastikan Anda memiliki:
 
-- <img src="https://www.google.com/s2/favicons?domain=nodejs.org" width="16" height="16"> Node.js (versi terbaru)
-- <img src="https://www.google.com/s2/favicons?domain=npmjs.com" width="16" height="16"> NPM (Node Package Manager)
-- <img src="https://www.google.com/s2/favicons?domain=tokopay.id" width="16" height="16"> Akun TOKOPAY ([REGISTRASI](https://tokopay.id?ref=AutoFtBot))
-- <img src="https://www.google.com/s2/favicons?domain=virtualserver.com" width="16" height="16"> VPS yang menggunakan  script FighterTunnel ([AutoScript](https://github.com/FighterTunnel/tunnel))
-- <img src="https://www.google.com/s2/favicons?domain=pm2.io" width="16" height="16"> PM2 untuk pengelolaan proses
+- <img src="https://www.google.com/s2/favicons?domain=nodejs.org" width="16" height="16"> Node.js (versi terbaru)  
+- <img src="https://www.google.com/s2/favicons?domain=npmjs.com" width="16" height="16"> NPM (Node Package Manager)  
+- <img src="https://www.google.com/s2/favicons?domain=tokopay.id" width="16" height="16"> Akun TOKOPAY ([REGISTRASI](https://tokopay.id?ref=AutoFtBot))  
+- <img src="https://www.google.com/s2/favicons?domain=virtualserver.com" width="16" height="16"> VPS yang menggunakan script FighterTunnel ([AutoScript](https://github.com/FighterTunnel/tunnel))  
+- <img src="https://cdn-icons-png.flaticon.com/16/6631/6631200.png" width="16" height="16"> API FighterTunnel ([API](https://github.com/AutoFTbot/Api))  
+- <img src="https://www.google.com/s2/favicons?domain=pm2.io" width="16" height="16"> PM2 untuk pengelolaan proses  
+ 
 
 ## Instalasi
 
@@ -83,6 +85,37 @@ Sebelum menjalankan proyek ini, pastikan Anda memiliki:
 4. Untuk mematikan bot, jalankan perintah:
    ```bash
    pm2 stop VpnBotStore
+   ```
+
+## Konfigurasi API untuk VPS dengan AutoScript FighterTunnel
+
+Untuk mengkonfigurasi API untuk VPS yang terpasang AutoScript FighterTunnel, Anda perlu mengikuti langkah-langkah berikut:
+
+1. Clone repositori API FighterTunnel:
+   ```bash
+   git clone https://github.com/AutoFTbot/Api.git
+   ```
+
+2. Masuk ke direktori proyek API:
+   ```bash
+   cd Api
+   ```
+
+3. Instal dependensi API:
+   ```bash
+   npm install
+   ```
+
+4. Jalankan `setup.sh` untuk mengatur dan menjalankan server sebagai service systemd:
+
+   ```bash
+    chmod +x setup.sh
+   ./setup.sh
+   ```
+
+5. Jalankan API menggunakan PM2:
+   ```bash
+   pm2 start ecosystem.config.js
    ```
 
 ## Kontribusi
