@@ -1,6 +1,6 @@
-# VpnBotStore
+# TOKOPAY QRIS
 
-VpnBotStore adalah bot yang dirancang untuk memudahkan pengguna dalam melakukan transaksi pembayaran menggunakan QRIS. Bot ini mendukung berbagai metode pembayaran dan menyediakan panduan langkah demi langkah untuk pengguna.
+TOKOPAY QRIS adalah bot yang dirancang untuk memudahkan pengguna dalam melakukan transaksi pembayaran menggunakan QRIS. Bot ini mendukung berbagai metode pembayaran dan menyediakan panduan langkah demi langkah untuk pengguna.
 
 ## Fitur
 
@@ -14,7 +14,7 @@ Sebelum menjalankan proyek ini, pastikan Anda memiliki:
 
 - <img src="https://www.google.com/s2/favicons?domain=nodejs.org" width="16" height="16"> Node.js (versi terbaru)
 - <img src="https://www.google.com/s2/favicons?domain=npmjs.com" width="16" height="16"> NPM (Node Package Manager)
-- <img src="https://www.google.com/s2/favicons?domain=tokopay.id" width="16" height="16"> Akun TOKOPAY ([REGISTRASI](https://tokopay.id?ref=AutoFtBot))
+- <img src="https://www.google.com/s2/favicons?domain=tokopay.id" width="16" height="16"> Akun TOKOPAY ([REGISTRASI](https://tokopay.com))
 - <img src="https://www.google.com/s2/favicons?domain=virtualserver.com" width="16" height="16"> VPS yang menggunakan  script FighterTunnel ([AutoScript](https://github.com/FighterTunnel/tunnel))
 - <img src="https://www.google.com/s2/favicons?domain=pm2.io" width="16" height="16"> PM2 untuk pengelolaan proses
 
@@ -95,7 +95,7 @@ Proyek ini dilisensikan di bawah MIT License. Lihat file [LICENSE](LICENSE) untu
 
 ## Kontak
 
-Jika Anda memiliki pertanyaan atau saran, silakan hubungi saya di [Telegram](https://t.me/AutoFtBot).
+Jika Anda memiliki pertanyaan atau saran, silakan hubungi saya di [WhatsApp](https://wa.me/6283106346274).
 
 ## Terima Kasih
 
