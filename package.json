@@ -7,10 +7,13 @@
     "start": "node app.js"
   },
   "dependencies": {
+    "@fightertunnel/cekft": "^1.0.9",
     "@fightertunnel/createft": "^0.6.0",
     "@mengkodingan/ckptw": "^4.3.6",
     "@whiskeysockets/baileys": "^6.7.9",
+    "crypto": "^1.0.1",
     "dotenv": "^16.0.0",
+    "md5": "^2.3.0",
     "sqlite3": "^5.0.0"
   },
   "author": "fightertunnel",

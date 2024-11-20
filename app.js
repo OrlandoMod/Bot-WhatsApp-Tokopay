@@ -20,6 +20,8 @@ const {
 } = require('./function/tokopay');
 require('dotenv').config();
 const sqlite3 = require('sqlite3').verbose();
+const menu = require('./ftvpn/menu');
+const cekAkun = require('./ftvpn/cekakun');
 
 let config = {
     admin: {
@@ -110,12 +112,15 @@ bot.command("create", async (ctx) => {
             time: 60000
         });
 
+        let isCancelled = false;
+
         col.on("collect", async (m) => {
             try {
                 const content = m.content.trim();
 
                 if (content.toLowerCase() === "cancel") {
-                    await ctx.reply("Proses dibatalkan. Silakan mulai dari awal.");
+                    isCancelled = true;
+                    await ctx.reply("Pembayaran dibatalkan. Silakan mulai dari awal.");
                     col.stop();
                     return;
                 }
@@ -226,7 +231,7 @@ bot.command("create", async (ctx) => {
                     try {
                         const paymentStatus = await checkPaymentStatus(refId, nominal, "QRISREALTIME");
 
-                        if (ctx.message && ctx.message.content && ctx.message.content.toLowerCase() === "cancel") {
+                        if (isCancelled) {
                             await ctx.reply("Pembayaran dibatalkan. Silakan mulai dari awal.");
                             return;
                         }
@@ -260,7 +265,7 @@ Nominal :Rp.${nominal}
 
 ║▌║▌║ - ║▌║▌║
 𝗖𝗢𝗡𝗧𝗔𝗖𝗧
-➥Hubungi (https://wa.me/${config.admin.number})
+➥Hubungi https://wa.me/${config.admin.number}
 ║▌║▌║ - ║▌║▌║
 ━━━━━━━━━━━━━━━━━━`;
 
@@ -443,7 +448,7 @@ bot.command("deleteserver", async (ctx) => {
     });
 });
 
-bot.command("cekakun", async (ctx) => {
+bot.command("ceksaldo", async (ctx) => {
     const senderId = ctx._sender.jid;
     if (senderId !== config.admin.id) {
         await ctx.reply("Maaf, hanya admin yang dapat menggunakan perintah ini.");
@@ -519,5 +524,9 @@ bot.command("addnotif", async (ctx) => {
         ctx.reply(`berhasil ditambahkan untuk notifikasi.`);
     });
 });
+
+bot.command("cekakun", cekAkun);
+
+menu(bot);
 
 bot.launch().catch((error) => console.error("[fightertunnel-bot] Error:", error));
