@@ -1,7 +1,7 @@
 # VpnBotStore
-
+<a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
 VpnBotStore adalah bot yang dirancang untuk memudahkan pengguna dalam melakukan transaksi pembayaran menggunakan QRIS. Bot ini mendukung berbagai metode pembayaran dan menyediakan panduan langkah demi langkah untuk pengguna.
-
+<a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
 ## Fitur
 
 - **Pembayaran QRIS**: Memungkinkan pengguna untuk melakukan pembayaran dengan mudah menggunakan kode QR.
