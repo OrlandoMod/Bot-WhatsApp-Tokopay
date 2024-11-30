@@ -1,8 +1,7 @@
 name: Auto Commit
 on:
   schedule:
-    #- cron: 0 0 * * *
-    - cron: "0 * * * *"
+    - cron: 0 0 * * *
   push:
     branches:
       - main
@@ -16,11 +15,11 @@ jobs:
       - name: Pull latest changes
         run: git pull origin main --rebase || echo "No changes to pull"
 
-      - name: Update AUTOFTBOT file
+      - name: Update LAST_UPDATED file
         run: |
-          echo "=== Modifying AUTOFTBOT File ==="
-          echo "Last updated at: $(date -u)" > AUTOFTBOT
-          cat AUTOFTBOT
+          echo "=== Modifying LAST_UPDATED File ==="
+          echo "Last updated at: $(date -u)" > LAST_UPDATED
+          cat LAST_UPDATED
       
       - name: Configure Git
         run: |
